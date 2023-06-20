@@ -1,5 +1,7 @@
 package storage;
 
+import java.util.Arrays;
+
 public class Point<T extends Comparable<T>> {
 
   private final T[] points;
@@ -68,4 +70,8 @@ public class Point<T extends Comparable<T>> {
     return dimension >= points.length || dimension < 0;
   }
 
+  @Override
+  public String toString() {
+    return "[ " + this.numDimensions() + " : " + Arrays.toString(this.points) + " ]";
+  }
 }
